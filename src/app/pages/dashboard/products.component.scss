@@ -1,0 +1,11 @@
+.custom-width {
+  width: 20vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mdc-button__label{
+    display: flex;
+    align-items: center;
+}
