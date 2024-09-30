@@ -42,11 +42,11 @@ export class AppSideLoginComponent {
     const { username, password } = this.loginForm.value;
     this.authService.login(username!, password!).subscribe({
       next: (data) => {
-        console.log(data);
         window.sessionStorage.removeItem(data);
         this.storageService.saveUser(data);
         this.isLoggedIn = true;
         this.loading = false;
+        this.snackbar.openSnackbar('Welcome to PaySky dashboard')
         this.router.navigate(['/dashboard'])
       },
       error: (err) => {
